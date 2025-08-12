@@ -342,7 +342,7 @@ res > xml > file_paths.xml 생성하시면 됩니다.
 
 
 ## Tab3Activity.java 카메라 퀘스트 추가 업데이트
-### (조건O: 러닝 시작지점에서 반경 2km이상 러닝 시 카메라 퀘스트 활성화)   
+### (조건O: 러닝 시작지점에서 반경 1km이상 러닝 시 카메라 퀘스트 활성화)   
 
 ```
 package kr.ac.hs.farm;
