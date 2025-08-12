@@ -662,6 +662,22 @@ public class Tab3Activity extends AppCompatActivity {
             }
         }
     }
-
 }
+
+```
+
+##AndroidManifest.xml에 추가
+<application> ~ </application>에 추가하시면 됩니다
+
+```
+<!-- 카메라 사진 저장을 위한 FileProvider 설정 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 ```
