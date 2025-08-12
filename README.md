@@ -666,8 +666,8 @@ public class Tab3Activity extends AppCompatActivity {
 
 ```
 
-##AndroidManifest.xml에 추가
-<application> ~ </application>에 추가하시면 됩니다
+## AndroidManifest.xml에 추가
+application ~ /application에 추가하시면 됩니다
 
 ```
 <!-- 카메라 사진 저장을 위한 FileProvider 설정 -->
