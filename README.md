@@ -1,7 +1,8 @@
 
 # 8/6
 추가 사항 실행 후 오류 발생 시 알려주세요!
-
+<details>
+    <summary>카메라 퀘스트 1</summary>
 ## Tab3Activity.java 카메라 퀘스트 추가 업데이트(조건 X)
 
 ```
@@ -681,3 +682,22 @@ application ~ /application에 추가하시면 됩니다
                 android:resource="@xml/file_paths" />
         </provider>
 ```
+</details>
+
+# 8/20
+## UI 수정본 파일 업로드 목록
+
+activity_tab3.xml   
+activity_photopreview.xml  // layout파일에 새로 추가해주시면 됩니다.
+
+## 내용추가
+
+build.gradel.kts(:app) 파일에서 dependencies{} 부분에 추가
+```
+implementation("com.google.mlkit:image-labeling:17.0.7")
+```
+
+## 카메라 퀘스트 수정본
+
+Tab3Activity.java   
+PhotoPreviewActivity.java  // 새로 추가된 java파일 
