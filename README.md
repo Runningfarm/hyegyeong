@@ -3,6 +3,27 @@
 깃허브에 파일 업로드 오류로 새로운 repositories 생성 후에도 오류가 나서 수정한 파일만 올려두었습니다.   
 이해 안 가시는 부분이나 오류 발생시 연락주세요!
 
+## 신규 추가 파일 목록   
+- PhotoPreviewActivity.java   
+- activity_photopreview.xml
+## 이전 업로드 파일 목록 (주원님이 아래 내용 추가하셔서 파일 업로드 해주셨습니다.)
+- file_paths.xml  [app>res>xml에 추가]  
+
+- AndroidManifest.xml   
+  application /application 에 추가
+```
+<!-- 카메라 사진 저장을 위한 FileProvider 설정 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+```
+
 ## build.gradle.kts(:app)
 버전 안정화 오류로 변경
 ```
@@ -592,7 +613,3 @@ Button buttonTakePhoto = findViewById(R.id.buttonTakePhoto);
             </LinearLayout>
 ```
 추가
-## 신규 추가 파일 목록   
-PhotoPreviewActivity.java   
-activity_photopreview.xml
-
